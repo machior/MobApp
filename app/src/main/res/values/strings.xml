@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Zakupowy Pomocnik</string>
+    <string name="LoginAct_welcomeText">Witaj! Prosimy o zalogowanie!</string>
+    <string name="LoginAct_Login_hint">Login</string>
+    <string name="LoginAct_password_hint">Hasło</string>
+    <string name="LoginAct_button">Zaloguj mnie!</string>
+    <string name="RegisterAct_login_hint">Podaj Nick</string>
+    <string name="RegisterAct_email_hint">Podaj E-Mail</string>
+    <string name="RegisterAct_password_hint">Podaj Hasło</string>
+    <string name="RegisterAct_passwordRe_hint">Powtórz Hasło</string>
+    <string name="RegisterAct_button">Zarejestruj mnie!</string>
+    <string name="trade_name">Nazwa towaru</string>
+    <string name="storeName">Dostępny w</string>
+    <string name="price">Cena [zł]</string>
+    <string name="amount">W posiadaniu</string>
+    <string name="back_to_login">Porwót do logowania</string>
+    <string name="new_element">Nowy</string>
+    <string name="LoginAct_register">Zarejestruj się</string>
+    <string name="MainAct_bSynch">synchronizuj</string>
+    <string name="btn_logout">Wyloguj</string>
+    <string name="LoginAct_onlineLogin">Loguj online</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="back_to_main">Powrót</string>
+    <string name="synchro_info">Synchronizacja oznacza pobranie danych z serwera, bądź wysłanie
+        ich na niego. Zmiany będą nieodwracalne.</string>
+    <string name="sync_with_server">Synchronizuj z serwerem</string>
+    <string name="confirm_Password">Potwierdź hasło</string>
+</resources>
