@@ -27,7 +27,6 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
 
     LocalDatabaseHelper myDb;
-    ConnectionRequest connectionRequest;
 
     private EditText etUsername;
     private EditText etPassword;

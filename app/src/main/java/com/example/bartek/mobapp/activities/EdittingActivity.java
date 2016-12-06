@@ -21,8 +21,8 @@ public class EdittingActivity extends AppCompatActivity
     Button bBackToMain;
     Button bCreateRow;
     Button bDelete;
-    ImageButton bAddUnit;
-    ImageButton bSubUnit;
+    Button bAddUnit;
+    Button bSubUnit;
     TextView etNameCreate;
     EditText etStoreNameCreate;
     EditText etPriceCreate;
@@ -40,8 +40,8 @@ public class EdittingActivity extends AppCompatActivity
         bBackToMain = (Button) findViewById(R.id.bBackToMain);
         bDelete = (Button) findViewById(R.id.bDelete);
         bCreateRow = (Button) findViewById(R.id.bSubmitChanges);
-        bAddUnit = (ImageButton) findViewById(R.id.bAddUnit);
-        bSubUnit = (ImageButton) findViewById(R.id.bSubUnit);
+        bAddUnit = (Button) findViewById(R.id.bAddUnit);
+        bSubUnit = (Button) findViewById(R.id.bSubUnit);
 
         etNameCreate = (TextView) findViewById(R.id.etNameCreate);
         etStoreNameCreate = (EditText) findViewById(R.id.etStoreNameCreate);
@@ -84,19 +84,19 @@ public class EdittingActivity extends AppCompatActivity
     }
 
     private void addSubUnit(boolean oneMore){
-        int amt = Integer.parseInt(tvUnitIncr.getText().toString());
+        String amtStr = tvUnitIncr.getText().toString();
+        int amt = Integer.parseInt(amtStr.substring(amtStr.indexOf("+") + 1));
 
         if(oneMore) amt += 1;
         else        amt -= 1;
 
-        tvUnitIncr.setText(amt + "");
+        if(amt >= 0) tvUnitIncr.setText("+" + amt);
+        else tvUnitIncr.setText("" + amt);
     }
 
 
     private void submitEdition()
     {
-
-
         if ( myDb.updateData(wareName,
                 etNameCreate.getText().toString(),
                 etStoreNameCreate.getText().toString(),
@@ -138,7 +138,9 @@ public class EdittingActivity extends AppCompatActivity
                 break;
             }
 
-        return Integer.toString( Integer.parseInt( tvUnitIncr.getText().toString() ) + increase );
+        String amtStr = tvUnitIncr.getText().toString();
+        int amt = Integer.parseInt(amtStr.substring(amtStr.indexOf("+") + 1));
+        return Integer.toString( amt + increase );
     }
 
     private void fillGaps()

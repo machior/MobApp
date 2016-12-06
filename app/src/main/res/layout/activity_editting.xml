@@ -83,16 +83,6 @@
         />
 
     <Button
-        android:text="Zatwierdź zmiany"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvAmountCreate"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/bSubmitChanges"
-        android:elevation="5dp"
-        style="@android:style/Widget.Button" />
-
-    <Button
         android:text="Skasuj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,22 +100,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        android:id="@+id/bSubUnit"
-        android:layout_below="@+id/bAddUnit"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/arrow_up_float"
-        android:id="@+id/bAddUnit"
-        android:layout_below="@+id/bSubmitChanges"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -138,14 +112,50 @@
         android:layout_below="@+id/textView6"
         android:layout_alignStart="@+id/bDelete" />
 
+    <Button
+        android:text="Zatwierdź zmiany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bSubmitChanges"
+        android:elevation="5dp"
+        style="@android:style/Widget.Button"
+        android:layout_below="@+id/tvAmountCreate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        android:id="@+id/bAddUnit"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="@color/regularText"
+        android:text="+"
+        android:textSize="36sp"
+        android:layout_below="@+id/tvAmountCreate"
+        android:layout_alignStart="@+id/etPriceCreate" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="32dp"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:textSize="18dp"
+        android:textSize="36sp"
         android:id="@+id/tvUnitIncr"
         android:textColor="@color/regularText"
-        android:layout_below="@+id/bSubUnit"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/tvAmountCreate"
+        android:layout_alignStart="@+id/bAddUnit"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:id="@+id/bSubUnit"
+        android:background="@android:color/holo_red_dark"
+        android:text="-"
+        android:textColor="@color/regularText"
+        android:textSize="36sp"
+        android:layout_below="@+id/tvAmountCreate"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
